@@ -4,7 +4,7 @@ from kivy.core.window import Window
 from kivy.lang import Builder
 from kivy.properties import StringProperty, ListProperty
 
-Window.size = (360, 640)
+# Window.size = (360, 640)
 
 # شحن ملفات التصميم
 Builder.load_file("accueil.kv")
