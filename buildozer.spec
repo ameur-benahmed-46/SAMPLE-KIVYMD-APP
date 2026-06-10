@@ -20,7 +20,9 @@ version = 0.1
 
 requirements = python3, kivy==2.3.1, kivymd, exceptiongroup, asynckivy, asyncgui, materialyoucolor, materialshapes
 
-icon.filename = engine.png
+icon.filename =  %(source.dir)s/images/demarrage.png
+
+presplash.filename = %(source.dir)s/images/splesh.png
 
 orientation = portrait
 
