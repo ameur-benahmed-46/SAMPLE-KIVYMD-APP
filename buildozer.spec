@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = SampleApp
+title = EurApp
 
 # (str) Package name
-package.name = nfsApk
+package.name = eurApk
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.novfensec
@@ -44,10 +44,10 @@ requirements = python3, kivy==2.3.1, https://github.com/kivymd/KivyMD/archive/ma
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/images/presplash.png
+presplash.filename = %(source.dir)s/engine.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/images/favicon.png
+icon.filename = %(source.dir)s/engine.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
