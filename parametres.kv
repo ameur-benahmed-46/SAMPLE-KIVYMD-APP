@@ -1,0 +1,22 @@
+<ParametresScreen>:
+    name: 'parametres_screen'
+    MDBoxLayout:
+        orientation: 'vertical'
+        md_bg_color: 0.98, 0.98, 0.98, 1
+        
+        MDTopAppBar:
+            title: "Parametres"
+            md_bg_color: 0.1, 0.15, 0.2, 1
+            left_action_items: [["arrow-left", lambda x: getattr(root, 'go_back')()]]
+            
+        MDFloatLayout:
+            MDLabel:
+                text: "Reglages du systeme"
+                halign: "center"
+                pos_hint: {"center_y": 0.6}
+                
+            MDRaisedButton:
+                text: "Retour a l'accueil"
+                md_bg_color: 0.1, 0.15, 0.2, 1
+                pos_hint: {"center_x": .5, "center_y": 0.45}
+                on_release: root.manager.current = 'accueil_screen'

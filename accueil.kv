@@ -1,0 +1,126 @@
+<AccueilScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        md_bg_color: 0.95, 0.96, 0.98, 1  # خلفية رمادية فاتحة مريحة
+        
+        MDTopAppBar:
+            title: "DIAGDIESEL MAÎTRE"
+            md_bg_color: 0.1, 0.15, 0.2, 1
+            elevation: 2
+            
+        MDScrollView:
+            MDBoxLayout:
+                orientation: 'vertical'
+                adaptive_height: True
+                padding: "16dp"
+                spacing: "16dp"
+                
+                # البطاقة الأولى: مشاكل بدء التشغيل
+                MDCard:
+                    size_hint_y: None
+                    height: "110dp"
+                    radius: [15, 15, 15, 15]
+                    padding: "12dp"
+                    elevation: 1
+                    on_release: root.open_category("Démarrage et Fonctionnement", ["1. Batterie faible ou déchargée", "2. Bougies de préchauffage défectueuses", "3. Filtre à carburant colmaté", "4. Démarreur endommagé"])
+                    
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        spacing: "12dp"
+                        
+                        Image:
+                            source: "engine.png"
+                            size_hint_x: None
+                            width: "70dp"
+                            allow_stretch: True
+                        
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            spacing: "4dp"
+                            MDLabel:
+                                text: "PROBLÈMES DE DÉMARRAGE"
+                                font_style: "Button"
+                                bold: True
+                            MDLabel:
+                                text: "Démarrage difficile"
+                                font_style: "Caption"
+                                theme_text_color: "Custom"
+                                text_color: 0.8, 0.2, 0.2, 1
+
+                # البطاقة الثانية: نقص القوة
+                MDCard:
+                    size_hint_y: None
+                    height: "110dp"
+                    radius: [15, 15, 15, 15]
+                    padding: "12dp"
+                    elevation: 1
+                    on_release: root.open_category("Manque de Puissance", ["1. Turbocompresseur défaillant", "2. Injecteurs encrassés", "3. Vanne EGR bloquée", "4. Problème de compression"])
+                    
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        spacing: "12dp"
+                        
+                        Image:
+                            source: "speed.png"
+                            size_hint_x: None
+                            width: "70dp"
+                            allow_stretch: True
+                        
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            spacing: "4dp"
+                            MDLabel:
+                                text: "PUISSANCE ET PERFORMANCE"
+                                font_style: "Button"
+                                bold: True
+                            MDLabel:
+                                text: "Manque de puissance"
+                                font_style: "Caption"
+
+                # البطاقة الثالثة: عوادم غير طبيعية
+                MDCard:
+                    size_hint_y: None
+                    height: "110dp"
+                    radius: [15, 15, 15, 15]
+                    padding: "12dp"
+                    elevation: 1
+                    on_release: root.open_category("Fumées d'Échappement", ["1. Fumée noire (Mauvais mélange)", "2. Fumée bleue (Huile brûlée)", "3. Fumée blanche (Liquide de refroidissement)"])
+                    
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        spacing: "12dp"
+                        
+                        Image:
+                            source: "smoke.png"
+                            size_hint_x: None
+                            width: "70dp"
+                            allow_stretch: True
+                        
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            spacing: "4dp"
+                            MDLabel:
+                                text: "FUMÉES D'ÉCHAPPEMENT"
+                                font_style: "Button"
+                                bold: True
+                            MDLabel:
+                                text: "Fumées anormales"
+                                font_style: "Caption"
+
+        # القائمة السفلية المحاكية للصورة (Bottom Navigation Bar)
+        MDBoxLayout:
+            size_hint_y: None
+            height: "56dp"
+            md_bg_color: 0.1, 0.15, 0.2, 1
+            padding: "5dp"
+            
+            MDFlatButton:
+                text: "🚀 Accueil"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                size_hint_x: 0.5
+            MDFlatButton:
+                text: "🔍 Profil"
+                theme_text_color: "Custom"
+                text_color: 0.6, 0.6, 0.6, 1
+                size_hint_x: 0.5

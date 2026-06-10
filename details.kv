@@ -1,0 +1,38 @@
+<DetailsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        md_bg_color: 0.98, 0.98, 0.98, 1
+        
+        MDTopAppBar:
+            title: root.category_title
+            md_bg_color: 0.1, 0.15, 0.2, 1
+            left_action_items: [["arrow-left", lambda x: root.go_back()]]
+            elevation: 2
+            
+        MDScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            MDBoxLayout:
+                orientation: 'vertical'
+                adaptive_height: True
+                padding: "20dp"
+                spacing: "20dp"
+                
+                MDLabel:
+                    text: "Causes et Solutions Possibles :"
+                    font_style: "H6"
+                    bold: True
+                    theme_text_color: "Secondary"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                
+                # هذا هو العنصر الذي تم إصلاحه ليتمدد تلقائياً بدون تداخل
+                MDLabel:
+                    text: "\n\n".join(root.problems) if root.problems else "Aucune donnée disponible"
+                    font_style: "Body1"
+                    theme_text_color: "Primary"
+                    size_hint_y: None
+                    height: self.texture_size[1]  # يجعل الارتفاع يتناسب مع طول النص
+                    text_size: self.width, None   # يمنع خروج النص عن الشاشة ويلفه برمجياً
+                    line_height: 1.3              # إضافة مساحة مريحة بين الأسطر للفخامة
