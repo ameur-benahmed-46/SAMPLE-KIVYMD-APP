@@ -20,7 +20,6 @@ version = 0.1
 
 requirements = python3, kivy==2.3.1, kivymd, exceptiongroup, asynckivy, asyncgui, materialyoucolor, materialshapes
 
-presplash.filename = engine.png
 icon.filename = engine.png
 
 orientation = portrait
