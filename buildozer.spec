@@ -16,11 +16,11 @@ source.include_exts = py,png,jpg,kv,atlas
 # ❌ حذفنا images بالكامل
 # source.include_patterns = images/*.png
 
-version = 0.1
+version = 0.2
 
 requirements = python3, kivy==2.3.1, kivymd, exceptiongroup, asynckivy, asyncgui, materialyoucolor, materialshapes
 
-icon.filename =  %(source.dir)s/images/demarrage.png
+icon.filename =  %(source.dir)s/images/logo.png
 
 presplash.filename = %(source.dir)s/images/splesh.png
 
