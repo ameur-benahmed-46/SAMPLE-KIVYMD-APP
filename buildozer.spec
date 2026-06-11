@@ -14,7 +14,7 @@ source.main = main.py
 source.include_exts = py,png,jpg,kv,atlas
 
 # ❌ حذفنا images بالكامل
-# source.include_patterns = images/*.png
+source.include_patterns = images/*.png
 
 version = 0.2
 
