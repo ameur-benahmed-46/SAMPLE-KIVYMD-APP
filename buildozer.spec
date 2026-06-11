@@ -22,14 +22,13 @@ requirements = python3, kivy==2.3.1, kivymd, exceptiongroup, asynckivy, asyncgui
 
 icon.filename =  %(source.dir)s/images/logo.png
 
-presplash.filename = %(source.dir)s/images/splesh.png
 
 orientation = portrait
 
 android.api = 36
 android.minapi = 30
 android.archs = arm64-v8a
-
+android.fullscreen = 0
 android.accept_sdk_license = True
 
 android.release_artifact = aab
