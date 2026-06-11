@@ -1,0 +1,161 @@
+<GuideContent>:
+    orientation: "vertical"
+    md_bg_color: 0.06, 0.06, 0.06, 1
+
+    # Barre d'outils supérieure
+    MDTopAppBar:
+        title: "Guide d'Entretien"
+        elevation: 4
+        md_bg_color: 0.10, 0.10, 0.10, 1
+
+    # Zone de défilement pour les conseils de maintenance
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+
+        MDBoxLayout:
+            orientation: "vertical"
+            padding: dp(16)
+            spacing: dp(16)
+            size_hint_y: None
+            height: self.minimum_height
+
+            # ========================================================
+            # CONSEIL 1: LE FILTRE À CARBURANT (فلتر الوقود)
+            # ========================================================
+            MDCard:
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: dp(16)
+                spacing: dp(10)
+                radius: [12]
+                md_bg_color: 0.12, 0.12, 0.12, 1
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    spacing: dp(10)
+                    MDIcon:
+                        icon: "filter-variant"
+                        theme_text_color: "Custom"
+                        text_color: 0.20, 0.60, 0.90, 1
+                    MDLabel:
+                        text: "Changement régulier du filtre à gazole"
+                        font_style: "Subtitle1"
+                        bold: True
+                        theme_text_color: "Custom"
+                        text_color: 0.20, 0.60, 0.90, 1
+
+                MDSeparator:
+
+                MDLabel:
+                    text: "Il est fortement recommandé de remplacer le filtre à gazole tous les 15 000 km à 20 000 km au maximum. Les moteurs diesel modernes (Common Rail) sont extrêmement sensibles aux impuretés et à l'eau présentes dans le carburant. Un filtre colmaté provoque une baisse de pression, des ratés d'allumage et peut détruire prématurément vos injecteurs et la pompe haute pression."
+                    theme_text_color: "Custom"
+                    text_color: 0.8, 0.8, 0.8, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+            # ========================================================
+            # CONSEIL 2: LA RÉGÉNÉRATION DU FAP (تنظيف فلتر البيئة)
+            # ========================================================
+            MDCard:
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: dp(16)
+                spacing: dp(10)
+                radius: [12]
+                md_bg_color: 0.12, 0.12, 0.12, 1
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    spacing: dp(10)
+                    MDIcon:
+                        icon: "gauge-empty"
+                        theme_text_color: "Custom"
+                        text_color: 0.20, 0.60, 0.90, 1
+                    MDLabel:
+                        text: "Nettoyage et régénération du FAP"
+                        font_style: "Subtitle1"
+                        bold: True
+                        theme_text_color: "Custom"
+                        text_color: 0.20, 0.60, 0.90, 1
+
+                MDSeparator:
+
+                MDLabel:
+                    text: "Pour éviter l'encrassement du Filtre à Particules (FAP) et de la vanne EGR, évitez les trajets urbains trop courts à répétition. Roulez sur autoroute au moins une fois par mois pendant 20 à 30 minutes à un régime supérieur à 3000 tr/min. Cela permet de monter la température des gaz d'échappement et de brûler automatiquement les suies accumulées."
+                    theme_text_color: "Custom"
+                    text_color: 0.8, 0.8, 0.8, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+            # ========================================================
+            # CONSEIL 3: LA QUALITÉ DE L'HUILE MOTEUR (زيت المحرك)
+            # ========================================================
+            MDCard:
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: dp(16)
+                spacing: dp(10)
+                radius: [12]
+                md_bg_color: 0.12, 0.12, 0.12, 1
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    spacing: dp(10)
+                    MDIcon:
+                        icon: "oil"
+                        theme_text_color: "Custom"
+                        text_color: 0.20, 0.60, 0.90, 1
+                    MDLabel:
+                        text: "Utilisation d'une huile moteur adaptée"
+                        font_style: "Subtitle1"
+                        bold: True
+                        theme_text_color: "Custom"
+                        text_color: 0.20, 0.60, 0.90, 1
+
+                MDSeparator:
+
+                MDLabel:
+                    text: "Le choix de l'huile est crucial pour la longévité du turbocompresseur et du moteur. Utilisez toujours une huile 100% synthétique conforme aux normes du constructeur (souvent Low SAPS pour préserver le FAP, comme la 5W30 ou 5W40). Changez l'huile et le filtre à huile tous les 10 000 km pour garantir une lubrification optimale et éviter la casse du turbo."
+                    theme_text_color: "Custom"
+                    text_color: 0.8, 0.8, 0.8, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+            # ========================================================
+            # CONSEIL 4: LE TEMPS D'ARRÊT DU TURBO (حماية التيربو عند التوقف)
+            # ========================================================
+            MDCard:
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: dp(16)
+                spacing: dp(10)
+                radius: [12]
+                md_bg_color: 0.12, 0.12, 0.12, 1
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    spacing: dp(10)
+                    MDIcon:
+                        icon: "timer-sand"
+                        theme_text_color: "Custom"
+                        text_color: 0.20, 0.60, 0.90, 1
+                    MDLabel:
+                        text: "Respecter le temps d'arrêt du turbo"
+                        font_style: "Subtitle1"
+                        bold: True
+                        theme_text_color: "Custom"
+                        text_color: 0.20, 0.60, 0.90, 1
+
+                MDSeparator:
+
+                MDLabel:
+                    text: "Après un trajet à vitesse élevée ou après avoir sollicité le moteur, ne coupez jamais le contact immédiatement. Laissez le moteur tourner au ralenti pendant environ 30 secondes à 1 minute. Cela permet à l'huile de continuer à circuler pour refroidir le turbocompresseur. Couper le moteur à chaud carbonise l'huile stagnante et détruit les paliers du turbo."
+                    theme_text_color: "Custom"
+                    text_color: 0.8, 0.8, 0.8, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]

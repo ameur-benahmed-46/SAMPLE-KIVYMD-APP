@@ -1,0 +1,105 @@
+<InfosContent>:
+    orientation: "vertical"
+    md_bg_color: 0.06, 0.06, 0.06, 1
+
+    # Barre d'outils supérieure
+    MDTopAppBar:
+        title: "À propos"
+        elevation: 4
+        md_bg_color: 0.10, 0.10, 0.10, 1
+
+    # استخدام ScrollView لتفادي أي انضغاط في الشاشات الصغيرة وللسماح بالقراءة المريحة
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+
+        MDBoxLayout:
+            orientation: "vertical"
+            padding: dp(24)
+            spacing: dp(20)
+            size_hint_y: None
+            height: self.minimum_height
+
+            # ================= L'IMAGE / LOGO =================
+            Image:
+                source: "images/img1.jpg"
+                size_hint: (None, None)
+                size: (dp(140), dp(140))
+                pos_hint: {"center_x": .5}
+                allow_stretch: True
+
+            # ================= NOM DU PROJET =================
+            MDLabel:
+                text: "Diesel Care v1.0"
+                font_style: "H5"
+                bold: True
+                halign: "center"
+                theme_text_color: "Custom"
+                text_color: 0.12, 0.40, 0.70, 1 # تلوين اسم التطبيق بالأزرق المميز
+                size_hint_y: None
+                height: self.texture_size[1]
+
+            MDSeparator:
+
+            # ================= DESCRIPTION (وصف التطبيق) =================
+            MDLabel:
+                text: "[b]Description du projet :[/b]"
+                markup: True
+                font_style: "Body1"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                size_hint_y: None
+                height: self.texture_size[1]
+
+            MDLabel:
+                text: "Diesel Care est une application mobile éducative et interactive spécialement conçue pour les conducteurs, les passionnés d'automobile et les apprentis mécaniciens. Elle sert de guide numérique pour comprendre, diagnostiquer et entretenir les moteurs diesel modernes (Common Rail, TDI, HDI, DCI)."
+                font_style: "Body2"
+                theme_text_color: "Custom"
+                text_color: 0.8, 0.8, 0.8, 1
+                size_hint_y: None
+                height: self.texture_size[1]
+
+            # ================= OBJECTIFS (الأهداف الأساسية) =================
+            MDLabel:
+                text: "[b]Objectifs clés :[/b]"
+                markup: True
+                font_style: "Body1"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                size_hint_y: None
+                height: self.texture_size[1]
+
+            MDLabel:
+                text: "• [b]Vulgarisation :[/b] Simplifier les concepts de pannes complexes (Turbo, FAP, Injecteurs).\n• [b]Diagnostic Rapide :[/b] Guider l'utilisateur pas à pas pour identifier l'origine d'un sifflement ou d'une fumée suspecte.\n• [b]Maintenance Préventive :[/b] Offrir des conseils précieux pour prolonger la durée de vie du moteur et réduire les frais de réparation."
+                markup: True
+                font_style: "Body2"
+                theme_text_color: "Custom"
+                text_color: 0.8, 0.8, 0.8, 1
+                size_hint_y: None
+                height: self.texture_size[1]
+
+            MDSeparator:
+
+            # ================= DEVELOPPEUR (المطور والحقوق) =================
+            MDBoxLayout:
+                orientation: "vertical"
+                adaptive_height: True
+                spacing: dp(6)
+                
+                MDLabel:
+                    text: "Développé ..."
+                    font_style: "Caption"
+                    halign: "center"
+                    theme_text_color: "Custom"
+                    text_color: 0.6, 0.6, 0.6, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "© 2026 Tous droits réservés."
+                    font_style: "Caption"
+                    halign: "center"
+                    theme_text_color: "Custom"
+                    text_color: 0.5, 0.5, 0.5, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]

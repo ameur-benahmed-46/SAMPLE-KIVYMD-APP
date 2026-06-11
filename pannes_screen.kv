@@ -1,0 +1,232 @@
+<PannesContent>:
+    orientation: "vertical"
+    md_bg_color: 0.06, 0.06, 0.06, 1
+
+    MDTopAppBar:
+        title: "Détails des Pannes"
+        elevation: 4
+        md_bg_color: 0.10, 0.10, 0.10, 1
+
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+
+        MDBoxLayout:
+            id: list_container
+            orientation: "vertical"
+            padding: dp(14)
+            spacing: dp(16)
+            size_hint_y: None
+            height: self.minimum_height # يضمن تمدد الحاوية بالكامل لجميع الكروت
+
+            # ========================================================
+            # 1. CAS: SYSTEME D'INJECTION
+            # ========================================================
+            MDCard:
+                id: item_injection
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height # جعل الكارت يتمدد تلقائياً بحسب النص
+                padding: dp(16)
+                spacing: dp(12)
+                radius: [15]
+                md_bg_color: 0.12, 0.12, 0.12, 1
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    spacing: dp(10)
+                    MDIcon:
+                        icon: "gas-station"
+                        theme_text_color: "Custom"
+                        text_color: 0.12, 0.40, 0.70, 1
+                    MDLabel:
+                        text: "1. Système d'injection"
+                        font_style: "H6"
+                        bold: True
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                MDSeparator:
+
+                MDLabel:
+                    text: "[b]Symptôme:[/b]\nDémarrage difficile et ratés moteur."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.9, 0.9, 0.9, 1
+                    size_hint_y: None
+                    height: self.texture_size[1] # يمنع انضغاط النص ويجبره على أخذ مساحته كاملة
+
+                MDLabel:
+                    text: "[b]Causes Possibles:[/b]\n• Injecteurs encrassés ou grippés.\n• Pompe à haute pression défaillante.\n• Filtre à carburant bouché."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.7, 0.7, 0.7, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "[b]Solutions:[/b]\n• Nettoyer ou remplacer les injecteurs.\n• Vérifier la pression de la pompe.\n• Changer le filtre à gazole."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.20, 0.60, 0.90, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+            # ========================================================
+            # 2. CAS: LE TURBOCOMPRESSEUR
+            # ========================================================
+            MDCard:
+                id: item_turbo
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: dp(16)
+                spacing: dp(12)
+                radius: [15]
+                md_bg_color: 0.12, 0.12, 0.12, 1
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    spacing: dp(10)
+                    MDIcon:
+                        icon: "fan"
+                        theme_text_color: "Custom"
+                        text_color: 0.12, 0.40, 0.70, 1
+                    MDLabel:
+                        text: "2. Turbocompresseur"
+                        font_style: "H6"
+                        bold: True
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                MDSeparator:
+
+                MDLabel:
+                    text: "[b]Symptôme:[/b]\nSifflement aigu et perte de puissance."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.9, 0.9, 0.9, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "[b]Causes Possibles:[/b]\n• Durite de turbo fendue ou déconnectée.\n• Palier de turbo usé (fuite d'huile).\n• Géométrie variable bloquée."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.7, 0.7, 0.7, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "[b]Solutions:[/b]\n• Inspecter et changer les durites percées.\n• Remplacer le CHRA ou le turbo complet.\n• Dégripper la géométrie variable."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.20, 0.60, 0.90, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+            # ========================================================
+            # 3. CAS: LE FILTRE A PARTICULES (FAP)
+            # ========================================================
+            MDCard:
+                id: item_fap
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: dp(16)
+                spacing: dp(12)
+                radius: [15]
+                md_bg_color: 0.12, 0.12, 0.12, 1
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    spacing: dp(10)
+                    MDIcon:
+                        icon: "filter-outline"
+                        theme_text_color: "Custom"
+                        text_color: 0.12, 0.40, 0.70, 1
+                    MDLabel:
+                        text: "3. Filtre à Particules (FAP)"
+                        font_style: "H6"
+                        bold: True
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                MDSeparator:
+
+                MDLabel:
+                    text: "[b]Symptôme:[/b]\nFumée noire dense et voyant moteur allumé."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.9, 0.9, 0.9, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "[b]Causes Possibles:[/b]\n• Colmatage du filtre dû aux trajets urbains.\n• Capteur de pression différentielle HS.\n• Mauvaise régénération du FAP."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.7, 0.7, 0.7, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "[b]Solutions:[/b]\n• Faire un cycle de régénération sur autoroute.\n• Nettoyage chimique ou remplacement du FAP.\n• Changer le capteur de pression."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.20, 0.60, 0.90, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+            # ========================================================
+            # 4. CAS: DEFAUT MOTEUR GENERAL
+            # ========================================================
+            MDCard:
+                id: item_moteur
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: dp(16)
+                spacing: dp(12)
+                radius: [15]
+                md_bg_color: 0.12, 0.12, 0.12, 1
+
+                MDBoxLayout:
+                    adaptive_height: True
+                    spacing: dp(10)
+                    MDIcon:
+                        icon: "engine"
+                        theme_text_color: "Custom"
+                        text_color: 0.12, 0.40, 0.70, 1
+                    MDLabel:
+                        text: "4. Défaut Moteur Général"
+                        font_style: "H6"
+                        bold: True
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                MDSeparator:
+
+                MDLabel:
+                    text: "[b]Symptôme:[/b]\nMode dégradé (perte de puissance) ou calage."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.9, 0.9, 0.9, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "[b]Causes Possibles:[/b]\n• Vanne EGR encrassée et bloquée.\n• Problème de capteur (PMH, Arbre à cames).\n• Prise d'air dans le circuit d'admission."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.7, 0.7, 0.7, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
+
+                MDLabel:
+                    text: "[b]Solutions:[/b]\n• Nettoyer ou remplacer la vanne EGR.\n• Passer un diagnostic scanner (OBD2).\n• Vérifier l'étanchéité de l'admission."
+                    markup: True
+                    theme_text_color: "Custom"
+                    text_color: 0.20, 0.60, 0.90, 1
+                    size_hint_y: None
+                    height: self.texture_size[1]
